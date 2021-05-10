@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分类</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+    <!--导航-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="nav-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+                <a href="#" class="nav-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+                <a href="#" class="nav-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+                <a href="#" class="nav-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+                <a href="#" class="nav-item active item m-mobile-hide"><i class="info icon"></i>关于我</a>
+                <div class="right item m-mobile-hide">
+                    <div class="ui icon inverted transparent input">
+                        <i class="search link icon"></i>
+                        <input type="text" placeholder="搜索">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="button" class="ui menu toggle black icon button m-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!--中间内容-->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <div class="eleven wide column">
+                    <div class="ui segment">
+                        <img src="https://picsum.photos/id/1012/800/600" alt="" class="ui rounded image">
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <div class="ui top attached segment">
+                        <div class="ui header">关于我</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <p class="m-text">姜李，一个独立开发者，折腾在 0 和 1 世界的大叔。一个终身学习者，誓将学习无限循环。希望结识可以共同成长的小伙伴</p>
+                        <p class="m-text">热爱编程，喜欢折腾，正在探索高效学习编程技术的方法。。。</p>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui orange basic label">编程</div>
+                        <div class="ui orange basic label">写作</div>
+                        <div class="ui orange basic label">思考</div>
+                        <div class="ui orange basic label">运动</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui teal basic label m-margin-tb-tiny">Java</div>
+                        <div class="ui teal basic label m-margin-tb-tiny">JavaScript</div>
+                        <div class="ui teal basic label m-margin-tb-tiny">Mysql</div>
+                        <div class="ui teal basic label m-margin-tb-tiny">Node</div>
+                        <div class="ui teal basic label m-margin-tb-tiny">C++</div>
+                    </div>
+                    <div class="ui bottom attached segment">
+                        <a href="#" class="ui circular icon button">
+                            <i class="github icon"></i>
+                        </a>
+                        <a href="#" class="ui wechat circular icon button">
+                            <i class="wechat icon"></i>
+                        </a>
+                        <a href="#" class="ui qq circular icon button" data-content="909278799@qq.com">
+                            <i class="qq icon"></i>
+                        </a>
+                    </div>
+                    <div class="ui wechat-QR flowing popup transition hidden">
+                        <img src="../static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive" >
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/wechat.jpg" class="ui rounded image" style="width: 110px">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-line m-text-spaced m-text-thin">最新博客</h4>
+                    <div class="ui inverted link list m-opacity-mini m-text-line m-text-spaced m-text-thin">
+                        <a href="#" class="item">最新故事（User Stroy）</a>
+                        <a href="#" class="item">关于刻意练习的清单</a>
+                        <a href="#" class="item">失败要趁早</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-line m-text-spaced m-text-thin">联系我</h4>
+                    <div class="ui inverted link list m-opacity-mini m-text-line m-text-spaced m-text-thin">
+                        <a href="#" class="item">Email：lirenmi@163.com</a>
+                        <a href="#" class="item">QQ：909278799</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-line m-text-spaced m-text-thin">ShanGuangFF</h4>
+                    <p class="m-text-line m-text-spaced m-text-thin m-opacity-tiny">总有起风的清晨,总有暖和的午后,总有绚丽的黄昏,总有有流星的夜晚</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-opacity-tiny m-text-line m-text-spaced m-text-thin">Copyright © 2020-2021 ApeNixX All Rights Reserved V.3.1.3 粤ICP备20013507号</p>
+        </div>
+    </footer>
+<script src="../static/js/Jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script>
+        $('.menu.toggle').click(function (){
+            $('.nav-item').toggleClass('m-mobile-hide');
+        });
+
+        $('.qq').popup({
+            position : 'top center'
+        });
+
+        $('.wechat').popup({
+            popup : $('.wechat-QR'),
+            on : 'hover',
+            position : 'top center'
+        })
+    </script>
+</body>
+</html>
