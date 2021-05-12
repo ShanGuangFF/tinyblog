@@ -9,4 +9,7 @@ logging:
     root: info # warn
     com.example.tinyblog: debug
   file:
-    path: log/blog
+    path: log/blog-pro
+
+server:
+  port: 8081
