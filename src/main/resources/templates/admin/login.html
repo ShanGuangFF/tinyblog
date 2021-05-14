@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head th:replace="/admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客管理</title>
@@ -23,7 +23,7 @@
                     登录到账号
                 </div>
             </h2>
-            <form class="ui large form" method="post">
+            <form class="ui large form" method="post" th:action="@{/admin/login}">
                 <div class="ui segment">
                     <div class="field">
                         <div class="ui left icon input">
@@ -37,15 +37,37 @@
                             <input type="password" name="password" placeholder="密码">
                         </div>
                     </div>
-                    <div class="ui fluid large teal submit button">登  录</div>
+                    <button class="ui fluid large teal submit button">登  录</button>
                 </div>
                 <div class="ui error message"></div>
+                <div class="ui negative mini message" >
+                    <p th:text="${msg}"></p>
+                </div>
             </form>
         </div>
     </div>
 </div>
 <script src="../../static/js/Jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
-
+<script>
+    $('.ui.form').form({
+        fields: {
+            username: {
+                identifier: 'username',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入用户名'
+                }]
+            },
+            password: {
+                identifier: 'password',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入密码'
+                }]
+            }
+        }
+    })
+</script>
 </body>
 </html>

@@ -1,9 +1,14 @@
 spring:
   datasource:
     username: root
-    password: ljfmmm666
+    password: ljfwww666
     url: jdbc:mysql://localhost:3306/tinyblog?useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
 
 logging:
   level:

@@ -3,6 +3,8 @@ package com.example.tinyblog.pojo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,9 +14,14 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
+@Entity
+@Table(name = "t_type")
 public class Type {
+
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
-
-    private List<Blog> blogs;
+    @OneToMany(mappedBy = "type")
+    private List<Blog> blogs = new ArrayList<>();
 }

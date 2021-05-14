@@ -3,6 +3,8 @@ package com.example.tinyblog.pojo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,9 +14,13 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
+@Entity
+@Table(name = "t_tag")
 public class Tag {
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
-
-    private List<Blog> blogList;
+    @ManyToMany(cascade = {CascadeType.PERSIST})
+    private List<Blog> blogList = new ArrayList<>();
 }

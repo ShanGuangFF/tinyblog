@@ -3,6 +3,7 @@ package com.example.tinyblog.pojo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,11 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
+@Entity
+@Table(name = "t_user")
 public class User {
+    @Id
+    @GeneratedValue
     private Long id;
     private String nickName;
     private String username;
@@ -21,8 +26,10 @@ public class User {
     private String email;
     private String avatar;
     private Integer type;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
-
+    @OneToMany(mappedBy = "user")
     private List<Blog> blogList;
 }

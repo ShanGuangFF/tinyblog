@@ -1,6 +1,7 @@
 package com.example.tinyblog.service;
 
-import org.apache.catalina.User;
+
+import com.example.tinyblog.pojo.User;
 
 /**
  * @author cc_ff

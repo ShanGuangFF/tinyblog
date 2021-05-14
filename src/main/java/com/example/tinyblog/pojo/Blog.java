@@ -1,10 +1,10 @@
 package com.example.tinyblog.pojo;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Bean;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -15,22 +15,31 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@Entity
+@Table(name = "t_blog")
 public class Blog {
+    @Id
+    @GeneratedValue
     private Long id;
+
     private String title;
     private String flagType;
     private Integer viewTimes;
     private boolean appreciation;
     private boolean shareStatement;
-    private boolean commentabled;
+    private boolean commentated;
     private boolean published;
     private boolean recommend;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
-
+    @ManyToOne
     private Type type;
+    @ManyToOne
     private User user;
+    @ManyToMany(mappedBy = "blogList")
     private List<Tag> tagList;
+    @OneToMany(mappedBy = "blog")
     private List<Comment> commentList;
 }
